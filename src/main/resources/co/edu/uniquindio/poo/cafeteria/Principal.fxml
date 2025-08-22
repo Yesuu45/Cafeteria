@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane prefHeight="549.0" prefWidth="619.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.cafeteria.controller.MainController">
+
+    <tabs>
+        <Tab fx:id="TabDocente" text="Docente">
+            <content>
+                <AnchorPane>
+                   <children>
+                       <!-- Corregido: 'source' en lugar de 'sources' -->
+                       <fx:include fx:id="EstudiantesInclude" source="Estudiante.fxml" />
+                   </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+
+        <Tab fx:id="TabEstudiante" text="Estudiante">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+        </Tab>
+
+        <Tab fx:id="TabVisitante" text="Visitante">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+        </Tab>
+
+        <Tab fx:id="TabBebida" text="Bebida">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>

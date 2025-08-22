@@ -13,4 +13,8 @@ module co.edu.uniquindio.poo.cafeteria {
     opens co.edu.uniquindio.poo.cafeteria.Model.Usuario to javafx.fxml;
     exports co.edu.uniquindio.poo.cafeteria.Model.Menu;
     opens co.edu.uniquindio.poo.cafeteria.Model.Menu to javafx.fxml;
+    exports co.edu.uniquindio.poo.cafeteria.Controller;
+    opens co.edu.uniquindio.poo.cafeteria.Controller to javafx.fxml;
+    exports co.edu.uniquindio.poo.cafeteria.ViewController;
+    opens co.edu.uniquindio.poo.cafeteria.ViewController to javafx.fxml;
 }

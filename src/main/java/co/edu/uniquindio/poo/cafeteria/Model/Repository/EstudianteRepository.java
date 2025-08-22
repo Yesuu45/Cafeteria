@@ -20,15 +20,16 @@ public class EstudianteRepository implements IEstudianteRepository {
     }
 
     @Override
-    public void eliminarEstudiante(String Cedula){
-        estudiantes.removeIf(estudiantes -> estudiantes.getCedula() == Cedula);
+    public void eliminarEstudiante(String cedula) {
+        estudiantes.removeIf(e -> e.getCedula().equals(cedula));
     }
 
 
+
     @Override
-    public void actualizarEstudiante(Estudiante estudiante){
-        for ( int i = 0 ; i < estudiantes.size() ; i++){
-            if(estudiantes.get(i).getCedula()== estudiante.getCedula()){
+    public void actualizarEstudiante(Estudiante estudiante) {
+        for (int i = 0; i < estudiantes.size(); i++) {
+            if (estudiantes.get(i).getCedula().equals(estudiante.getCedula())) {
                 estudiantes.set(i, estudiante);
                 return;
             }
@@ -36,11 +37,17 @@ public class EstudianteRepository implements IEstudianteRepository {
     }
 
 
-    @Override
-    public Estudiante buscarEstudiante(String cedula){
-        return estudiantes.stream().filter(estudiante -> estudiante.getCedula() == cedula).findFirst().orElse(null);
 
+    @Override
+    public Estudiante buscarEstudiante(String cedula) {
+        return estudiantes.stream()
+                .filter(e -> e.getCedula().equals(cedula))
+                .findFirst()
+                .orElse(null);
     }
 
 
+    public List<Estudiante> obtenerTodos() {
+        return estudiantes; // Retorna la lista completa
+    }
 }

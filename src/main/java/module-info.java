@@ -3,6 +3,7 @@ module co.edu.uniquindio.poo.cafeteria {
     requires javafx.fxml;
     requires static lombok;
     requires co.edu.uniquindio.poo.cafeteria;
+    requires java.desktop;
 
 
     opens co.edu.uniquindio.poo.cafeteria to javafx.fxml;
